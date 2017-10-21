@@ -13,17 +13,14 @@ User.collection.drop();
 // Create the models
 User
   .create([{
-    firstName: 'Anne',
     username: 'a',
     email: 'a@a.com',
     password: 'password'
   }, {
-    firstName: 'Belinda',
     username: 'b',
     email: 'b@b.com',
     password: 'password'
   }, {
-    firstName: 'Carl',
     username: 'c',
     email: 'c@c.com',
     password: 'password'
