@@ -5,10 +5,15 @@ function registrationNew(req, res) {
   res.render('registrations/new');
 }
 
-//write a function that creates the new user
 
-function registrationCreate(req, res) {
-  //do something
+function registrationCreate(req, res, next) {
+  User
+    .create(req.body)
+    .then(() => res.redirect('/login'))
+    .catch((err) => {
+      if(err.name === 'ValidationError') return res.badRequest('/register', err.toString());
+      next(err);
+    });
 }
 
 module.exports = {
