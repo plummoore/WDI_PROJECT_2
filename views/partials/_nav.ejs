@@ -19,9 +19,13 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+        <% if(!locals.isAuthenticated) { %>
         <a class="nav-item nav-link" href="/login">Log in</a>
-        <a class="nav-item nav-link" href="register">Join us</a>
-        <a class="nav-item nav-link disabled" href="#">Faces</a>
+        <a class="nav-item nav-link" href="register">Register</a>
+        <% } else { %>
+          <a class="nav-item nav-link disabled" href="/faces">Faces</a>
+          <a class="nav-item nav-link disabled" href="/logout">Log out</a>
+          <% } %>
       </div>
     </div>
   </nav>

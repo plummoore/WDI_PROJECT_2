@@ -6,16 +6,19 @@ function registrationNew(req, res) {
 }
 
 
-function registrationCreate(req, res,) {
+function registrationCreate(req, res) {
   User
     .create(req.body)
-    .then(() => res.redirect('/'))
+    .then((user) => {
+      req.flash('info', `Welcome to faces in places, ${user.username}!`);
+      req.session.userId = user._id;
+      res.redirect('/');
+    })
     .catch((err) => {
-      if(err.name === 'ValidationError') {
+      if (err.name === 'ValidationError') {
         return res.status(400).render('registrations/new', { message: 'Passwords do not match' });
-      // } res.badRequest('/register', err.toString());
-      // next(err);
-      } res.status(500).end();
+      }
+      res.status(500).end();
     });
 }
 

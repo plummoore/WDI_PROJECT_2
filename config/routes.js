@@ -1,8 +1,9 @@
 const express = require('express');
 const router  = express.Router();
-const registration = require('../controllers/registrations');
-const session = require('../controllers/sessions')
-
+const registrations = require('../controllers/registrations');
+const sessions = require('../controllers/sessions');
+const faces = require('../controllers/faces');
+const secureRoute = require('../lib/secureRoute');
 
 // A home route
 router.get('/', (req, res) => res.render('homepage'));
@@ -10,41 +11,33 @@ router.get('/', (req, res) => res.render('homepage'));
 //USER SETUP
 
 router.route('/register')
-  .get(registration.new)
-  .post(registration.create);
+  .get(registrations.new)
+  .post(registrations.create);
 
 router.route('/login')
-  .get(session.new)
-  .post(session.create);
+  .get(sessions.new)
+  .post(sessions.create);
 
 router.route('/logout')
-  .get(session.delete);
+  .get(sessions.delete);
 
+router.route('/faces')
+  .get(faces.new)
+  .post(faces.create);
 
-// RESTful routes
-// All URLS should contain the PLURAL... don't chose octopus or people or something silly.
+router.get('/faces/new')
+  .get(faces.new)
+  .get(secureRoute, faces.new);
 
-// FACES SETUP
+router.get('/faces/:id')
+  .get(faces.show)
+  .put(secureRoute, faces.update)
+  .delete(secureRoute, faces.delete);
 
-// INDEX
-router.get('/faces', (req, res) => res.render('faces/index'));
+router.get('/faces/:id/edit')
+  .get(secureRoute, faces.edit);
 
-// NEW
-router.get('/faces/new', (req, res) => res.render('faces/new'));
+router.all('*', (req, res) => res.notFound());
 
-// SHOW
-router.get('/faces/:id', (req, res) => res.render('faces/show'));
-
-// CREATE
-router.post('/faces', (req, res) => res.send('CREATE'));
-
-// EDIT
-router.get('/faces/:id/edit', (req, res) => res.render('faces/edit'));
-
-// UPDATE
-router.put('/faces/:id', (req, res) => res.send('UPDATE'));
-
-// DELETE
-router.delete('/faces/:id', (req, res) => res.send('DELETE'));
 
 module.exports = router;
