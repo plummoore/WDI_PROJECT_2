@@ -37,9 +37,6 @@ router.route('/faces/:id')
 router.route('/faces/:id/edit')
   .get(secureRoute, faces.edit);
 
-router.route('/faces/show')
-  .get(faces.show);
-
 router.all('*', (req, res) => res.notFound());
 
 

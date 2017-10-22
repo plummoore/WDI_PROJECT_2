@@ -4,7 +4,5 @@
 <img src="<%= face.image %>">
 <h2><%= face.title %></h2>
 <h3><%= face.location %></h3>
-<p>
-  <% while(faces.rating--) { %> &heart; <% } %>
-</p>
+<p><% while(face.rating--) { %> &hearts; <% } %></p>
 </div>

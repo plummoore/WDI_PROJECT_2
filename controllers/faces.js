@@ -14,16 +14,10 @@ function faceNew(req, res) {
 }
 
 function faceCreate(req, res, next) {
-
-  req.body.createdBy = req.user;
-
   Face
     .create(req.body)
     .then(() => res.redirect('faces/index'))
-    .catch((err) => {
-      if(err.name === 'ValidationError') return res.badRequest(`faces/${req.params.id}/edit`, err.toString());
-      next(err);
-    });
+    .catch(next);
 }
 
 
@@ -37,7 +31,6 @@ function faceShow(req, res, next) {
     })
     .catch(next);
 }
-
 
 function faceEdit(req, res, next) {
   Face
