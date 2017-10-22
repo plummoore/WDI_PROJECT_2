@@ -13,6 +13,7 @@ function registrationCreate(req, res) {
       req.flash('info', `Welcome to faces in places, ${user.username}!`);
       req.session.userId = user._id;
       res.redirect('/');
+      console.log(`${user._id}!`);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {

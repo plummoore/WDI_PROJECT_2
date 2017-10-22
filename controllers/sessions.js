@@ -1,46 +1,28 @@
-// const User = require('../models/user');
-//
-// function sessionNew (req, res) {
-//   res.render('sessions/new');
-// }
-//
-// function sessionCreate(req, res) {
-//   User
-//     .findOne({ email: req.body.email })
-//     .then((user) => {
-//       if(!user || !user.validatePassword(req.body.password)) {
-//         return res.status(401).render('sessions/new', { message: 'Oops! Unrecognised credentials, please try again.' });
-//       }
-//
-//       req.session.userId = user.id;
-//
-//       return res.redirect('/');
-//     });
-// }
-//
-// function sessionDelete(req,res) {
-//   return req.session.regenerate(() => res.redirect('/'));
-// }
-
 const User = require('../models/user');
 
 function sessionNew(req, res) {
   res.render('sessions/new');
 }
 
-function sessionCreate(req, res) {
+function sessionCreate(req, res, next) {
   User
     .findOne({ email: req.body.email })
     .then((user) => {
       if(!user || !user.validatePassword(req.body.password)) {
-        return res.status(401).render('sessions/new', { message: 'Unrecognised credentials' });
+        req.flash('danger', 'Unknown email/password combination');
+        return res.redirect('/login');
       }
-      req.flash('success', `Welcome back ${user.username}`);
-      req.session.userId = user._id;
 
-      return res.redirect('/');
-    });
+      req.session.userId = user.id;
+      req.session.isAuthenticated = true;
+      req.user = user;
+
+      req.flash('success', `Welcome back, ${user.username}!`);
+      res.redirect('/');
+    })
+    .catch(next);
 }
+
 
 function sessionDelete(req, res) {
   return req.session.regenerate(() => {
