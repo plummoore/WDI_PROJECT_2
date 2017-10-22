@@ -1,1 +1,10 @@
 <h1>Faces show</h1>
+
+<div class="large-12 columns">
+<img src="<%= face.image %>">
+<h2><%= face.title %></h2>
+<h3><%= face.location %></h3>
+<p>
+  <% while(faces.rating--) { %> &heart; <% } %>
+</p>
+</div>

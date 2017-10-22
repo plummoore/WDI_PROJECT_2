@@ -8,6 +8,7 @@ function faceIndex(req, res, next) {
     .catch(next);
 }
 
+
 function faceNew(req, res) {
   return res.render('faces/new');
 }
@@ -18,9 +19,9 @@ function faceCreate(req, res, next) {
 
   Face
     .create(req.body)
-    .then(() => res.redirect('/faces'))
+    .then(() => res.redirect('faces/index'))
     .catch((err) => {
-      if(err.name === 'ValidationError') return res.badRequest(`/faces/${req.params.id}/edit`, err.toString());
+      if(err.name === 'ValidationError') return res.badRequest(`faces/${req.params.id}/edit`, err.toString());
       next(err);
     });
 }
@@ -36,6 +37,7 @@ function faceShow(req, res, next) {
     })
     .catch(next);
 }
+
 
 function faceEdit(req, res, next) {
   Face
@@ -76,9 +78,10 @@ function faceDelete(req, res, next) {
       if(!face) return res.notFound();
       return face.remove();
     })
-    .then(() => res.redirect('/faces'))
+    .then(() => res.redirect('faces/index'))
     .catch(next);
 }
+
 
 module.exports = {
   index: faceIndex,

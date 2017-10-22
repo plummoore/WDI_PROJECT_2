@@ -1,1 +1,27 @@
 <h1>Faces edit</h1>
+
+<form method="POST" action="/faces/<%= face.id %>">
+  <input type="hidden" name="_method" value="PUT">
+
+  <div>
+    <label for="image">Image url</label>
+    <input type="text" name="image" id="image" value="<%= face.image %>">
+  </div>
+
+  <div>
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" value="<%= face.title %>">
+  </div>
+
+  <div>
+    <label for="location">Location</label>
+    <input type="text" name="location" id="location" value="<%= face.location %>">
+  </div>
+
+  <div>
+    <label for="rating">Love</label>
+    <input type="number" name="rating" id="rating" value="<%= face.rating %>">
+  </div>
+
+  <button>Update</button>
+</form>
