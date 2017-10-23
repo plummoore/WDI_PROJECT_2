@@ -3,6 +3,7 @@ const Face = require('../models/face');
 function faceIndex(req, res, next) {
   Face
     .find()
+    .populate('createdBy')
     .exec()
     .then((faces) => res.render('faces/index', { faces }))
     .catch(next);
@@ -13,11 +14,24 @@ function faceNew(req, res) {
   return res.render('faces/new');
 }
 
+// function faceCreate(req, res, next) {
+//   Face
+//     .create(req.body)
+//     .then(() => res.redirect('faces/index'))
+//     .catch(next);
+// }
+
 function faceCreate(req, res, next) {
+
+  req.body.createdBy = req.user;
+
   Face
     .create(req.body)
     .then(() => res.redirect('faces/index'))
-    .catch(next);
+    .catch((err) => {
+      if(err.name === 'ValidationError') return res.badRequest(`/faces/${req.params.id}/edit`, err.toString());
+      next(err);
+    });
 }
 
 
@@ -71,7 +85,7 @@ function faceDelete(req, res, next) {
       if(!face) return res.notFound();
       return face.remove();
     })
-    .then(() => res.redirect('faces/index'))
+    .then(() => res.redirect('/faces'))
     .catch(next);
 }
 
