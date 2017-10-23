@@ -1,5 +1,16 @@
 <h1>Faces show</h1>
 
+<%# EDIT/DELETE BUTTON IF USER CREATED FACE %>
+<% if(locals.isAuthenticated && face.belongsTo(user)) { %>
+  <a href="/faces/<%= face.id %>/edit">Edit</a>
+  <form method="POST" action="/faces/<%= face.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+  </form>
+<% } %>
+
+
+<%# DISPLAY THE FACE %>
 <div class="large-12 columns">
 <img src="<%= face.image %>">
 <h2><%= face.title %></h2>
@@ -8,12 +19,33 @@
 <p>Added by: <%= face.createdBy.username %></p>
 
 
-<% if(locals.isAuthenticated && face.belongsTo(user)) { %>
-  <a href="/faces/<%= face.id %>/edit">Edit</a>
-  <form method="POST" action="/faces/<%= face.id %>">
+<%# DISPLAY COMMENTS %>
+<section>
+  <h4>Comments</h4>
+  <% face.comments.forEach((comment) => { %>
+    <p><%= comment.content %></p>
+    <small><%= comment.createdBy.username %></small>
+
+    <% if(locals.isAuthenticated && comment.belongsTo(user)) { %>
+  <form method="POST" action="/faces/<%= face.id %>/comments/<%= comment.id %>">
     <input type="hidden" name="_method" value="DELETE">
     <button>Delete</button>
   </form>
 <% } %>
+  <% }) %>
+</section>
+
+
+<%# DISPLAY OPTION TO LEAVE COMMENT %>
+<% if(locals.isAuthenticated) { %>
+  <section>
+    <h4>Leave a comment</h4>
+    <form method="POST" action="/faces/<%= face.id %>/comments">
+      <textarea name="content" id="content" placeholder="Comment"></textarea>
+      <button class="button">Leave a comment</button>
+    </form>
+  </section>
+<% } %>
+
 
 </div>

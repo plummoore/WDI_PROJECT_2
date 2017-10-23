@@ -8,7 +8,7 @@ const secureRoute = require('../lib/secureRoute');
 // A home route
 router.get('/', (req, res) => res.render('homepage'));
 
-//LOGIN LOGOUT & SESSIONS
+//REGISTERING & SESSIONS
 router.route('/register')
   .get(registrations.new)
   .post(registrations.create);
@@ -20,8 +20,7 @@ router.route('/login')
 router.route('/logout')
   .get(sessions.delete);
 
-//NAVIGATING FACES
-
+//FACES
 router.route('/faces')
   .get(faces.index)
   .post(faces.create);
@@ -37,7 +36,13 @@ router.route('/faces/:id')
 router.route('/faces/:id/edit')
   .get(secureRoute, faces.edit);
 
-router.all('*', (req, res) => res.notFound());
+//COMMENTS
+router.route('/faces/:id/comments')
+  .post(faces.commentCreate);
 
+router.route('/faces/:id/comments/:commentId')
+  .delete(faces.commentDelete);
+
+router.all('*', (req, res) => res.notFound());
 
 module.exports = router;

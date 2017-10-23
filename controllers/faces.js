@@ -38,7 +38,7 @@ function faceCreate(req, res, next) {
 function faceShow(req, res, next) {
   Face
     .findById(req.params.id)
-    .populate('createdBy')
+    .populate('createdBy comments.createdBy')
     .exec()
     .then((face) => {
       if(!face) return res.notFound();
@@ -90,6 +90,41 @@ function faceDelete(req, res, next) {
     .catch(next);
 }
 
+function commentCreate(req, res, next) {
+  console.log('YO');
+  Face
+    .findById(req.params.id)
+    .exec()
+    .then((face) => {
+      if(!face) return res.notFound();
+
+      req.body.createdBy = req.user;
+      face.comments.push(req.body); // create an embedded record
+      return face.save();
+    })
+    .then(() => res.redirect(`/faces/${req.params.id}`))
+    .catch((err) => {
+      if (err.name === 'ValidationError') res.badRequest(`/faces/${req.params.id}`, err.toString());
+      next(err);
+    });
+}
+
+function commentDelete(req, res, next) {
+  Face
+    .findById(req.params.id)
+    .exec()
+    .then((face) => {
+      if(!face) return res.notFound();
+      // get the embedded record by it's id
+      const comment = face.comments.id(req.params.commentId);
+      comment.remove();
+
+      return face.save();
+    })
+    .then((face) => res.redirect(`/faces/${face.id}`))
+    .catch(next);
+}
+
 
 module.exports = {
   index: faceIndex,
@@ -98,5 +133,7 @@ module.exports = {
   show: faceShow,
   edit: faceEdit,
   update: faceUpdate,
-  delete: faceDelete
+  delete: faceDelete,
+  commentCreate: commentCreate,
+  commentDelete: commentDelete
 };
