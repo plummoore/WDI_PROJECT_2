@@ -4,6 +4,16 @@
 <img src="<%= face.image %>">
 <h2><%= face.title %></h2>
 <h3><%= face.location %></h3>
-<p><% while(face.rating--) { %> &hearts; <% } %></p>
-<%# <p><%= face.createdBy.username %></p>%>
+<p>Joy: <% while(face.rating--) { %> &hearts; <% } %></p>
+<p>Added by: <%= face.createdBy.username %></p>
+
+
+<% if(locals.isAuthenticated && face.belongsTo(user)) { %>
+  <a href="/faces/<%= face.id %>/edit">Edit</a>
+  <form method="POST" action="/faces/<%= face.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+  </form>
+<% } %>
+
 </div>

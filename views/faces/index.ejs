@@ -13,16 +13,10 @@
 
       <p>Location: <%= face.location %></p>
 
-      <p>Love: <% while(face.rating--) { %> &hearts; <% } %></p>
+      <p>Joy: <% while(face.rating--) { %> &hearts; <% } %></p>
 
       <p>Added by: <%= face.createdBy.username %></p>
-
-      <h5><a href= "/faces/<%= face.id %>/edit">Edit</a></h5>
-          <form action="/faces/<%= face.id %>" method="POST">
-
-        <input type="hidden" name="_method" value="DELETE"/>
-        <button>Delete</button>
-          </form>
+      </form>
       </li>
       <% }) %>
     </ul>

@@ -8,4 +8,8 @@ const faceSchema = new mongoose.Schema({
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 });
 
+faceSchema.methods.belongsTo = function belongsTo(user) {
+  return this.createdBy.id === user.id;
+};
+
 module.exports = mongoose.model('Face', faceSchema);
