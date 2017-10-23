@@ -1,20 +1,25 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">faces in places</a>
+
+  <nav class="navbar navbar-expand-md">
+    <%# <a class="navbar-brand" href="/">faces in places</a>%>
+    <a class="navbar-brand" href="#">
+  <img src="http://www.pngmart.com/files/2/Moustache-Transparent-PNG.png" width="70" height="40" class="d-inline-block align-center" alt=""><span class="brand">
+  faces in places</span>
+</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+      <ul class="nav navbar-nav">
         <%# <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>%>
         <% if(!locals.isAuthenticated) { %>
-          <li><a class="nav-item nav-link" href="/login">Log in</a></li>
+          <li><a class="nav-item nav-link" href="/login">Log In</a></li>
           <li><a class="nav-item nav-link" href="/register">Register</a></li>
           <% } else { %>
             <li><a class="nav-item nav-link" href="/faces">Faces</a></li>
-            <li><a class="nav-item nav-link" href="/logout">Log out</a></li>
+            <li><a class="nav-item nav-link" href="/logout">Log Out</a></li>
             <% } %>
-          </div>
+          </ul>
         </div>
       </nav>
     </header>

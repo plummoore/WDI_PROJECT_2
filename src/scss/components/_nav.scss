@@ -1,0 +1,15 @@
+.navbar {
+  background-color: $color-pink;
+    a.nav-item {
+      color: darken($color-grey, 40%);
+      font-family: 'Roboto Mono', monospace;
+    }
+    a.nav-item:hover {
+      color: white;
+    }
+    .brand {
+      font-family: 'Abril Fatface', cursive;
+      color: white;
+      text-transform: uppercase;
+    }
+}

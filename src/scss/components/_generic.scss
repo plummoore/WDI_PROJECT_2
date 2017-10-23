@@ -1,0 +1,47 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: lighten($color-grey, 90%);
+}
+
+
+
+//FACE MAIN PAGE
+.container {
+  // border: 2px solid blue;
+  width: auto;
+}
+
+ul.row {
+  // border: 2px solid purple;
+}
+
+.hearts {
+  color: $color-pink;
+}
+
+
+.faces {
+  // border: 1px solid red;
+  margin: 10px 0;
+  // border-bottom: 2px solid $color-grey;
+
+
+  .face {
+  //   border: 2px solid orange;
+    line-height: 50px;
+    }
+}
+
+
+
+.rating {
+  float:left;
+}
+
+.added {
+  float: right;
+}

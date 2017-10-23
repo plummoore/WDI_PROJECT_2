@@ -1,0 +1,28 @@
+// 'Annie Use Your Telescope', cursive;}
+// 'Abril Fatface', cursive;}
+// 'Roboto Condensed', sans-serif;}
+// 'Roboto Mono', monospace;}
+// 'Roboto Mono', monospace;}
+
+h1 {
+  font-family: 'Annie Use Your Telescope', cursive;
+  color: darken($color-pink, 10%)
+}
+
+h2 {
+  font-family: 'Abril Fatface', cursive;
+  color: $color-turquoise;
+  font-size: 20px;
+}
+
+p {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $color-grey;
+}
+
+
+// faces main page
+.pre {
+  font-family: 'Roboto Mono', monospace;
+  color: darken($color-grey, 10%)
+}

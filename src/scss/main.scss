@@ -1,8 +1,8 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  background: pink;
-}
+//helpers
+@import "helpers/reset";
+@import "helpers/variables";
 
-h1 {
-  color: green;
-}
+//components
+@import "components/generic";
+@import "components/typography";
+@import "components/nav";
