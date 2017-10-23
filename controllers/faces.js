@@ -27,7 +27,7 @@ function faceCreate(req, res, next) {
 
   Face
     .create(req.body)
-    .then(() => res.redirect('faces/index'))
+    .then(() => res.redirect('/faces'))
     .catch((err) => {
       if(err.name === 'ValidationError') return res.badRequest(`/faces/${req.params.id}/edit`, err.toString());
       next(err);
