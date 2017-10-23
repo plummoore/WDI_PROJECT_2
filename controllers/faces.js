@@ -38,6 +38,7 @@ function faceCreate(req, res, next) {
 function faceShow(req, res, next) {
   Face
     .findById(req.params.id)
+    .populate('createdBy')
     .exec()
     .then((face) => {
       if(!face) return res.notFound();

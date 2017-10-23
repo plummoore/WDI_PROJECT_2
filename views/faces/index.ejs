@@ -15,7 +15,7 @@
 
       <p>Love: <% while(face.rating--) { %> &hearts; <% } %></p>
 
-      <p><%= face.createdBy %></p>
+      <p>Added by: <%= face.createdBy.username %></p>
 
       <h5><a href= "/faces/<%= face.id %>/edit">Edit</a></h5>
           <form action="/faces/<%= face.id %>" method="POST">
