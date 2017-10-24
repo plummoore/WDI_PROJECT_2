@@ -10,20 +10,20 @@
     <% faces.forEach((face) => { %>
       <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="card" style="">
-      <a href = "/faces/<%= face.id %>"><img class="card-img-top rounded img-fluid img-thumbnail" src="<%= face.image %>">
-      <a href = "/faces/<%= face.id %>"></a>
-      <div class="card-body">
+        <div class="main-img">
+          <a href = "/faces/<%= face.id %>"><img class="card-img-top rounded img-fluid img-thumbnail" src="<%= face.image %>"></a>
+          </div>
+          <div class="card-body">
 
-      <h2 class="card-title"><%= face.title %></h2>
+            <h2 class="card-title"><%= face.title %></h2>
 
-      <li class"card-text location"><p><span class="pre">Location: </span><%= face.location %></p></li>
+              <li class"card-text location"><p><span class="pre">Location: </span><%= face.location %></p></li>
 
-      <li class="card-text added"><p><span class="pre">Added by: </span><%= face.createdBy.username %></p></li>
+              <li class="card-text added"><p><span class="pre">Added by: </span><%= face.createdBy.username %></p></li>
 
-      <li class="card-text rating"><p><span class="pre">Joy: </span><span class="hearts"><% while(face.rating--) { %> &hearts; <% } %></span></p></li>
-      </div>
-
-      </div>
+              <li class="card-text rating"><p><span class="pre">Joy: </span><span class="hearts"><% while(face.rating--) { %> &hearts; <% } %></span></p></li>
+          </div>
+          </div>
       </div>
       <% }) %>
     </div>

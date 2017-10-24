@@ -1,15 +1,14 @@
 .home {
+  text-align: center;
   line-height: 1.5;
+  padding: 30px;
   .title {
-    text-align: center;
     color: darken($color-grey, 40%)
   }
   .sub-title {
-    text-align: center;
     color: darken($color-turquoise, 20%)
   }
   .title-description {
-    text-align: center;
     color: darken($color-grey, 10%)
   }
   .description {
@@ -21,18 +20,18 @@
   }
 }
 
-.home-login-form {
+.home-login {
   background-color: lighten($color-turquoise, 30%);
-  // padding: 50px 30px;
   line-height: 1.5;
 }
-
-.home-login {
-  background-color: grey;
-}
-
 
 
 li {
   list-style: none;
+}
+
+.bottom {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
