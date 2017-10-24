@@ -2,6 +2,8 @@
   .wrapper {
     margin: 60px auto;
     .show-face {
+      line-height: 1.5;
+      margin: 10px auto;
       .faces-img {
         height: 300px;
         margin: auto auto 30px auto;
@@ -26,9 +28,12 @@
           li {
             margin: 10px auto;
           }
+          button {
+            margin: 5px auto;
+          }
       }
       .leave-comment {
-        padding: auto auto 30px auto;
+        padding: 30px auto;
         form {
           max-width: 100%;
           textarea {

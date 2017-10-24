@@ -1,24 +1,34 @@
 .edit-button {
-  background-color: $color-turquoise;
-  border: 2px solid darken($color-grey, 30%);
-  border-radius: 30px;
-  width: 70px;
+  color: darken($color-grey, 80%);
+  border: none;
+  &:hover {
+    color: white;
+    background-color: darken($color-grey, 30%);
+  }
 }
 
 .delete-button {
-  background-color: darken($color-turquoise, 25%);
-  border: 2px solid darken($color-grey, 30%);
-  border-radius: 30px;
-  width: 70px;
+  color: darken($color-grey, 80%);
+  border: none;
+  &:hover {
+    color: white;
+    background-color: darken($color-grey, 30%);
+  }
 }
+
 
 .comment-button {
   background-color: $color-turquoise;
-  border: 2px solid darken($color-grey, 30%);
+  border: 2px solid darken($color-grey, 50%);
   border-radius: 30px;
   width: 70px;
+  padding: 5px;
+  &:hover {
+    color: white;
+    background-color: darken($color-grey, 30%);
+  }
 }
 
 .add-button {
-  background-color: lighten($color-turquoise,20%);
+  background-color: lighten($color-turquoise,30%);
 }

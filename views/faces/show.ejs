@@ -21,10 +21,11 @@
           <%# EDIT/DELETE BUTTON IF USER CREATED FACE %>
           <div class="show-face-details-2 col-lg-4 col-md-4">
             <% if(locals.isAuthenticated && face.belongsTo(user)) { %>
-              <a href="/faces/<%= face.id %>/edit"><button type="button" class="edit-button">Edit</button></a>
+              <a href="/faces/<%= face.id %>/edit"><button type="button" class="edit-button"><i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+
               <form method="POST" action="/faces/<%= face.id %>">
                 <input type="hidden" name="_method" value="DELETE">
-                <button class="delete-button">Delete</button>
+                <button class="delete-button"><i class="fa fa-ban" aria-hidden="true"></i></button>
               </form>
             <% } %>
           </div>
@@ -49,12 +50,12 @@
           <ul>
             <% face.comments.forEach((comment) => { %>
               <li>
-                <p><span class="username-comment"><%= comment.content %></span></p>
+                <p><span class="username-comment"><i class="fa fa-quote-left" aria-hidden="true"></i><%= comment.content %></span></p>
                 <p><span class="username-sig"><%= comment.createdBy.username %></span></p>
                 <% if(locals.isAuthenticated && comment.belongsTo(user)) { %>
                   <form method="POST" action="/faces/<%= face.id %>/comments/<%= comment.id %>">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button class="delete-button">Delete</button>
+                    <button class="delete-button"><i class="fa fa-ban" aria-hidden="true"></i></button>
                   </form>
                 <% } %>
               </li>
