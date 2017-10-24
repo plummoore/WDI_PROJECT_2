@@ -2,6 +2,7 @@
 // 'Abril Fatface', cursive;}
 // 'Roboto Mono', monospace;}
 // 'Lora', serif;
+// 'Source Sans Pro', sans-serif;
 
 h1 {
   font-family: 'Annie Use Your Telescope', cursive;
@@ -28,7 +29,7 @@ h5 {
 }
 
 p {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family:'Source Sans Pro', sans-serif;
   color: $color-grey;
 }
 
@@ -46,10 +47,22 @@ p {
   color: darken($color-grey, 10%)
 }
 
-a.nav-item {
+//navbar
+
+.brand {
+    font-family: 'Lora', serif;
+}
+
+.nav-item {
   font-family: 'Roboto Mono', monospace;
 }
 
+
 .footer {
-  font-family: 'Abril Fatface', cursive;
+  font-family:'Lora', serif;
+}
+
+//forms
+.form-group {
+  font-family: 'Roboto Mono', monospace;
 }

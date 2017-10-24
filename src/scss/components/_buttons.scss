@@ -1,0 +1,24 @@
+.edit-button {
+  background-color: $color-turquoise;
+  border: 2px solid darken($color-grey, 30%);
+  border-radius: 30px;
+  width: 70px;
+}
+
+.delete-button {
+  background-color: darken($color-turquoise, 25%);
+  border: 2px solid darken($color-grey, 30%);
+  border-radius: 30px;
+  width: 70px;
+}
+
+.comment-button {
+  background-color: $color-turquoise;
+  border: 2px solid darken($color-grey, 30%);
+  border-radius: 30px;
+  width: 70px;
+}
+
+.add-button {
+  background-color: lighten($color-turquoise,20%);
+}

@@ -26,8 +26,14 @@
   }
 }
 
+.home-login-form {
+  background-color: lighten($color-turquoise, 30%);
+  padding: 50px 30px;
+  line-height: 1.5;
+}
+
 .home-login {
-  background-color: pink;
+background-color: grey;
 }
 
 .home-pics {

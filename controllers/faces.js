@@ -14,13 +14,6 @@ function faceNew(req, res) {
   return res.render('faces/new');
 }
 
-// function faceCreate(req, res, next) {
-//   Face
-//     .create(req.body)
-//     .then(() => res.redirect('faces/index'))
-//     .catch(next);
-// }
-
 function faceCreate(req, res, next) {
 
   req.body.createdBy = req.user;

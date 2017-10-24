@@ -7,15 +7,16 @@
       color: white;
     }
     .brand {
-      font-family: 'Abril Fatface', cursive;
       color: white;
-      text-transform: uppercase;
+    }
+    .nav-item {
+      align-items: center;
     }
 }
 
-// .navbar-toggler {
-//   background-color: $color-grey;
-// }
+.navbar-toggler {
+  background-color: $color-grey;
+}
 //
 // .navbar-toggler:hover: { background-color: : orange;
 // }
