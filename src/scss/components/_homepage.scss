@@ -17,27 +17,20 @@
   }
   .p1{
     background-color: lighten($color-pink, 50%);
-    padding: 10px 30px;
-  }
-  .p2 {
-    background-color: lighten($color-pink, 20%);
-    padding: 20px 40px;
-    text-align: center;
+    // padding: 10px 30px;
   }
 }
 
 .home-login-form {
   background-color: lighten($color-turquoise, 30%);
-  padding: 50px 30px;
+  // padding: 50px 30px;
   line-height: 1.5;
 }
 
 .home-login {
-background-color: grey;
+  background-color: grey;
 }
 
-.home-pics {
-}
 
 
 li {

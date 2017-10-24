@@ -1,0 +1,37 @@
+.faces-show {
+  .wrapper {
+    margin: 60px auto;
+    .show-face {
+      .faces-img {
+        height: 300px;
+        margin: auto auto 30px auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .show-face-details-2 {
+        form {
+          display: inline-block;
+        }
+      }
+    }
+    .comments {
+      .display-comments {
+        padding: 70px 0;
+      }
+      .leave-comment {
+        padding: 70px 0;
+        form {
+          max-width: 100%;
+          textarea {
+            display: block;
+            width: 100%;
+          }
+          button {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

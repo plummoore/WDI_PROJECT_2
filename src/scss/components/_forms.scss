@@ -1,12 +1,21 @@
 //register
 
+form {
+  max-width: 300px;
+  margin: auto;
+}
+
 .register {
-  width: 300px;
+  // width: 300px;
   align-items: center;
 }
 
 
 .login {
-  width: 300px;
+  // width: 300px;
   align-items: center;
+}
+
+.home-login-form {
+  padding: 30px;
 }
