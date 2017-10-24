@@ -15,17 +15,17 @@ Face.collection.drop();
 // Create the models
 User
   .create([{
-    username: 'a',
+    username: 'FluffyKitten',
     email: 'a@a.com',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
-    username: 'b',
+    username: 'Pina Colada',
     email: 'b@b.com',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
-    username: 'c',
+    username: 'Carl',
     email: 'c@c.com',
     password: 'password',
     passwordConfirmation: 'password'
@@ -44,13 +44,25 @@ User
         location: 'Palermo, Italy',
         image: 'https://www.themarysue.com/wp-content/uploads/2011/02/faces_viewfinder.jpg',
         rating: 4,
-        createdBy: users[0]
+        createdBy: users[1]
       }, {
+        title: 'Golden Oldie',
+        location: 'My kitchen, London',
+        image: 'https://www.themarysue.com/wp-content/uploads/2011/02/faces_happywood.jpg',
+        rating: 4,
+        createdBy: users[2]
+      },{
+        title: 'Love The Barnet',
+        location: 'My kitchen, London',
+        image: 'https://static.boredpanda.com/blog/wp-content/uuuploads/things-with-faces/things-with-faces-20.jpg',
+        rating: 3,
+        createdBy: users[2]
+      },{
         title: 'Say Cheese',
         location: 'My kitchen, London',
-        image: 'http://www.drbongo.com/content/images/y/k/m/p/7/ykmp7wod80dz.jpg',
+        image: 'https://www.themarysue.com/wp-content/uploads/2011/02/faces_adorableclock.jpg',
         rating: 3,
-        createdBy: users[0]
+        createdBy: users[2]
       },{
         title: 'How Much Did I Drink?!',
         location: 'The floor, Wales',

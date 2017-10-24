@@ -1,7 +1,7 @@
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 body {
   background: lighten($color-grey, 90%);
@@ -10,10 +10,17 @@ body {
 
 
 //FACE MAIN PAGE
-.container {
-  // border: 2px solid blue;
-  width: auto;
+.box {
+  margin-bottom: 10px;
+ }
+
+.2 {
+  background-color: orange;
 }
+
+// .1 {
+//   border: 1px solid red;
+// }
 
 ul.row {
   // border: 2px solid purple;
@@ -24,20 +31,6 @@ ul.row {
 }
 
 
-.faces {
-  // border: 1px solid red;
-  margin: 10px 0;
-  // border-bottom: 2px solid $color-grey;
-
-
-  .face {
-  //   border: 2px solid orange;
-    line-height: 50px;
-    }
-}
-
-
-
 .rating {
   float:left;
 }
@@ -45,3 +38,43 @@ ul.row {
 .added {
   float: right;
 }
+
+
+
+// .faces {
+  // border: 1px solid black;
+  // border-bottom: 2px solid $color-grey;
+//   margin: 10px 0
+//   px;
+// }
+
+// .faces {
+//   display: table;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+//
+// .faces:after {
+//   border-bottom: 2px solid #f00;
+//   content: '';
+//   display: block;
+//   margin-left: 25%;
+//   width: 50%;
+// }
+//
+// .face {
+//   border: 1px solid orange;
+//   line-height: 60px;
+// }
+//
+// .title {
+//   border: 1px solid purple;
+//   // line-height: 50px;
+// }
+// .location {
+//   // line-height: 50px;
+// }
+// .rating .added {
+//   border: 1px solid blue;
+//   // line-height: 50px;
+// }
