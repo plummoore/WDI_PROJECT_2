@@ -13,15 +13,16 @@
     color: darken($color-grey, 10%)
   }
   .description {
-    color: red;
+    color: darken($color-grey, 40%);
   }
   .p1{
-    background-color: orange;
-    padding: 10px;
+    background-color: lighten($color-pink, 50%);
+    padding: 10px 30px;
   }
   .p2 {
-    background-color: yellow;
-    padding: 20px;
+    background-color: lighten($color-pink, 20%);
+    padding: 20px 40px;
+    text-align: center;
   }
 }
 

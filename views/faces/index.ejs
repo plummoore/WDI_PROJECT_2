@@ -1,28 +1,28 @@
-<%# <h1>Faces home</h1>%>
-
 <div class="box 1">
   <div class ="row">
     <a href="/faces/new" class="col-lg-12 col-md-12 btn btn-light">Add a new face</a>
   </div>
 </div>
 
-<div class="box 2">
-  <%# <div class="container">%>
-    <div class="row">
-      <% faces.forEach((face) => { %>
-        <ul class="faces col-lg-4 col-md-6">
 
-        <li class="face"><a href= "/faces/<%= face.id %>"><img class="pic img-thumbnail img-fluid" src="<%= face.image %>"></a></li>
+<div class="row">
+  <% faces.forEach((face) => { %>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="card" style="">
+    <img class="card-img-top rounded" src="<%= face.image %>" alt="Card image cap">
+    <div class="card-body">
 
-        <li class"title"><h2><%= face.title %></h2></li>
+    <h2 class="card-title"><%= face.title %></h2>
 
-        <li class"location"><p><span class="pre">Location: </span><%= face.location %></p></li>
+    <li class"card-text location"><p><span class="pre">Location: </span><%= face.location %></p></li>
 
-        <li class="rating"><p><span class="pre">Joy: </span><span class="hearts"><% while(face.rating--) { %> &hearts; <% } %></span></p></li>
+    <li class="card-text added"><p><span class="pre">Added by: </span><%= face.createdBy.username %></p></li>
 
-        <li class="added"><p><span class="pre">Added by: </span><%= face.createdBy.username %></p></li>
-        </ul>
-        <% }) %>
-      </div>
-    <%# </div>%>
+    <li class="card-text rating"><p><span class="pre">Joy: </span><span class="hearts"><% while(face.rating--) { %> &hearts; <% } %></span></p></li>
+    </div>
+
+    </div>
+    </div>
+    <% }) %>
   </div>
+</div>
