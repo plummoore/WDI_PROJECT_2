@@ -1,8 +1,7 @@
 // 'Annie Use Your Telescope', cursive;}
 // 'Abril Fatface', cursive;}
-// 'Roboto Condensed', sans-serif;}
 // 'Roboto Mono', monospace;}
-// 'Roboto Mono', monospace;}
+// 'Lora', serif;
 
 h1 {
   font-family: 'Annie Use Your Telescope', cursive;
@@ -15,9 +14,29 @@ h2 {
   font-size: 20px;
 }
 
+h3 { font-family: 'Lora', serif;
+    font-size: 50px;
+}
+
+h4 { font-family: 'Lora', serif;
+  font-size: 24px;
+}
+
+h5 {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+}
+
 p {
   font-family: 'Roboto Condensed', sans-serif;
   color: $color-grey;
+}
+
+
+//homepage
+
+.description {
+  font-family: 'Roboto Mono', monospace;
 }
 
 
@@ -25,4 +44,8 @@ p {
 .pre {
   font-family: 'Roboto Mono', monospace;
   color: darken($color-grey, 10%)
+}
+
+a.nav-item {
+  font-family: 'Roboto Mono', monospace;
 }

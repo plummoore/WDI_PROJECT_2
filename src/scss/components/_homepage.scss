@@ -1,0 +1,38 @@
+.home {
+  line-height: 1.5;
+  .title {
+    text-align: center;
+    color: darken($color-grey, 40%)
+  }
+  .sub-title {
+    text-align: center;
+    color: darken($color-turquoise, 20%)
+  }
+  .title-description {
+    text-align: center;
+    color: darken($color-grey, 10%)
+  }
+  .description {
+    color: red;
+  }
+  .p1{
+    background-color: orange;
+    padding: 10px;
+  }
+  .p2 {
+    background-color: yellow;
+    padding: 20px;
+  }
+}
+
+.home-login {
+  background-color: pink;
+}
+
+.home-pics {
+}
+
+
+li {
+  list-style: none;
+}
