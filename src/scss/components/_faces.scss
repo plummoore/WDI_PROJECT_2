@@ -1,14 +1,28 @@
-// .main-img {
-//   height: 100px;
-//   margin: 10px auto;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
+//SHOW ALL FACES
+.card{
+  border: none;
+  .a {
+    text-decoration: none;
+    color: $color-turquoise;
+    &:hover {
+      text-decoration: none;
+      color: black;
+      }
+    }
+    li {
+      margin: 10px auto;
+      // line-height: 1.5;
+      }
+    .main-img {
+      height: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+    }
 
 
-
-
+//SHOW FACE
 .faces-show {
   .wrapper {
     margin: 60px auto;
@@ -36,12 +50,12 @@
           width: 100%;
           margin: 20px auto 10px auto;
         }
-          li {
-            margin: 10px auto;
-          }
-          button {
-            margin: 5px auto;
-          }
+        li {
+          margin: 10px auto;
+        }
+        button {
+          margin: 5px auto;
+        }
       }
       .leave-comment {
         padding: 30px auto;

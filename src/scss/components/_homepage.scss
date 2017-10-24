@@ -1,7 +1,7 @@
 .home {
   text-align: center;
   line-height: 1.5;
-  padding: 30px;
+  padding: 50px;
   .title {
     color: darken($color-grey, 40%)
   }
@@ -23,6 +23,10 @@
 .home-login {
   background-color: lighten($color-turquoise, 30%);
   line-height: 1.5;
+  .small {
+    text-align: center;
+    padding-top: 50px;
+  }
 }
 
 

@@ -12,7 +12,7 @@ function registrationCreate(req, res) {
     .then((user) => {
       req.flash('info', `Welcome to faces in places, ${user.username}!`);
       req.session.userId = user._id;
-      res.redirect('/faces');
+      res.redirect('/');
       console.log(`${user._id}!`);
     })
     .catch((err) => {
