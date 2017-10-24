@@ -66,3 +66,16 @@ p {
 .form-group {
   font-family: 'Roboto Mono', monospace;
 }
+
+
+//comments
+.username-comment {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+}
+
+.username-sig {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  color: darken($color-grey, 40%)
+}

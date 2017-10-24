@@ -49,8 +49,8 @@
           <ul>
             <% face.comments.forEach((comment) => { %>
               <li>
-                <p><%= comment.content %></p>
-                <p><%= comment.createdBy.username %></p>
+                <p><span class="username-comment"><%= comment.content %></span></p>
+                <p><span class="username-sig"><%= comment.createdBy.username %></span></p>
                 <% if(locals.isAuthenticated && comment.belongsTo(user)) { %>
                   <form method="POST" action="/faces/<%= face.id %>/comments/<%= comment.id %>">
                     <input type="hidden" name="_method" value="DELETE">
