@@ -20,6 +20,15 @@
   }
 }
 
+.back-button {
+  background-color: white;
+  color: darken($color-blue, 10%);
+  border: none;
+  &:hover {
+    color: darken($color-grey, 80%);
+  }
+}
+
 
 .comment-button {
   background-color: $color-pink;
