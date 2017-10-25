@@ -10,7 +10,7 @@ function registrationCreate(req, res) {
   User
     .create(req.body)
     .then((user) => {
-      req.flash('info', `Welcome to faces in places, ${user.username}!`);
+      req.flash('info', `Welcome to faces in places, ${user.username}! Please log in to join the community.`);
       req.session.userId = user._id;
       res.redirect('/');
       console.log(`${user._id}!`);

@@ -17,7 +17,7 @@ function sessionCreate(req, res, next) {
       req.session.isAuthenticated = true;
       req.user = user;
 
-      req.flash('success', `Welcome back, ${user.username}!`);
+      // req.flash('success', `Welcome back, ${user.username}!`); //chose not to use
       res.redirect('/faces');
     })
     .catch(next);
@@ -26,7 +26,7 @@ function sessionCreate(req, res, next) {
 
 function sessionDelete(req, res) {
   return req.session.regenerate(() => {
-    req.flash('success', 'You successfully logged out.');
+    req.flash('warning', 'You successfully logged out.');
     res.redirect('/');
   });
 }
