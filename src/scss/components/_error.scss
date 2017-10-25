@@ -1,0 +1,18 @@
+.error {
+  img {
+    max-height:200px;
+  }
+  li {
+    line-height: 1.2;
+    margin: 10px auto;
+    text-align: center;
+  }
+  a {
+    color: $color-blue;
+    font-size: 30px;
+  }
+  a:hover {
+    text-decoration: none;
+    color: darken($color-grey, 80%);
+  }
+}

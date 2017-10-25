@@ -1,3 +1,7 @@
+.hearts {
+  color: $color-pink;
+}
+
 .edit-button {
   background-color: white;
   color: #0198E1;
@@ -22,7 +26,7 @@
   color: white;
   border: 2px solid darken($color-grey, 50%);
   border-radius: 30px;
-  width: 70px;
+  width: 80px;
   padding: 5px;
   &:hover {
     color: lighten($color-grey, 30%);

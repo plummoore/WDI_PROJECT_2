@@ -1,25 +1,13 @@
-//register
-
 form {
   max-width: 300px;
   margin: auto;
-}
-
-.register {
-  // width: 300px;
-  align-items: center;
-}
-
-.new {
-  align-items: center;
-}
-
-.edit {
-  align-items: center;
+  .form-button {
+    margin: 20px auto;
+    text-align: center;
+  }
 }
 
 .login {
-  // width: 300px;
   align-items: center;
 }
 
@@ -27,7 +15,17 @@ form {
   padding: 30px;
 }
 
-// .edit-form {
-//   max-width: 300px;
-//   margin: auto;
-// }
+.new-form {
+  align-items: center;
+  margin: 20px auto;
+}
+
+.edit-form {
+  align-items: center;
+  margin: 20px auto;
+}
+
+.register-form {
+  align-items: center;
+  margin: 20px auto;
+}

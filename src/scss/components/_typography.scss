@@ -11,7 +11,7 @@ h1 {
 
 h2 {
   font-family: 'Abril Fatface', cursive;
-  color: $color-blue;
+  color: darken($color-blue, 5%);
   font-size: 20px;
 }
 

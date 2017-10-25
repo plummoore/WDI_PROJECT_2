@@ -1,29 +1,32 @@
 <div class="row">
   <div class="col-lg-12 col-md-12">
-    <form method="POST" action="/faces/<%= face.id %>" class="edit">
+
+    <form method="POST" action="/faces/<%= face.id %>">
       <input type="hidden" class="form-control" name="_method" value="PUT">
 
-      <div class= "form-group edit">
+      <div class= "form-group edit-form">
         <label for="image">Image url</label>
         <input type="text" class="form-control" name="image" id="image" value="<%= face.image %>">
       </div>
 
-      <div class= "form-group edit">
+      <div class= "form-group edit-form">
         <label for="title">Title</label>
         <input type="text" class="form-control" name="title" id="title" value="<%= face.title %>">
       </div>
 
-      <div class= "form-group edit">
+      <div class= "form-group edit-form">
         <label for="location">Location</label>
         <input type="text" class="form-control" name="location" id="location" value="<%= face.location %>">
       </div>
 
-      <div class= "form-group edit">
+      <div class= "form-group edit-form">
         <label for="rating">Love</label>
         <input type="number" class="form-control" name="rating" id="rating" value="<%= face.rating %>">
       </div>
 
-      <button class="button comment-button">Update</button>
+      <div class="form-button">
+        <button class="button comment-button">Update</button>
+      </div>
     </form>
   </div>
 </div>
