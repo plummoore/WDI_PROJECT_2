@@ -1,17 +1,8 @@
 //SHOW ALL FACES
 .card{
   border: none;
-  .a {
-    text-decoration: none;
-    color: $color-turquoise;
-    &:hover {
-      text-decoration: none;
-      color: black;
-      }
-    }
     li {
       margin: 10px auto;
-      // line-height: 1.5;
       }
     .main-img {
       height: 200px;
@@ -37,6 +28,7 @@
         background-size: cover;
       }
       .show-face-details-2 {
+        align-items: right;
         form {
           display: inline-block;
         }

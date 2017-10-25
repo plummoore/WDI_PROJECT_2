@@ -1,38 +1,51 @@
 .edit-button {
-  color: darken($color-grey, 80%);
+  background-color: white;
+  color: #0198E1;
   border: none;
   &:hover {
-    color: white;
-    background-color: darken($color-grey, 30%);
+    color: darken($color-grey, 80%);
   }
 }
 
 .delete-button {
-  color: darken($color-grey, 80%);
+  background-color: white;
+  color: red;
   border: none;
   &:hover {
-    color: white;
-    background-color: darken($color-grey, 30%);
+    color: darken($color-grey, 80%);
   }
 }
 
 
 .comment-button {
-  background-color: $color-turquoise;
+  background-color: $color-pink;
+  color: white;
   border: 2px solid darken($color-grey, 50%);
   border-radius: 30px;
   width: 70px;
   padding: 5px;
   &:hover {
-    color: white;
-    background-color: darken($color-grey, 30%);
+    color: lighten($color-grey, 30%);
+    background-color: darken($color-blue, 10%);
+    border: 2px solid darken($color-grey, 50%);
   }
 }
 
 .add-button {
-  background-color: lighten($color-turquoise,30%);
+  background: none;
+  color: darken($color-pink, 5%);
+  &:hover {
+    color: darken($color-grey, 50%);
+    background-color: lighten($color-turquoise,25%);
+  }
+  .fa-caret-up {
+    color: $color-pink;
+  }
+    &:hover {
+    color: darken($color-grey, 50%);
+  }
 }
-// 
+//
 // .login {
 //   margin: 0 auto;
 // }

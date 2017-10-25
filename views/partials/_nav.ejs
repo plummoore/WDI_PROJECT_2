@@ -18,9 +18,7 @@
           <li><a class="nav-item nav-link" href="/login">Log In</a></li>
           <li><a class="nav-item nav-link" href="/register">Register</a></li>
           <% } else { %>
-
-            <li class="nav-item" ><%= `${user.username}` %> </li>
-
+            <li class="nav-item nav-link" ><span class= "name"><%= `Hi, ${user.username}!` %> </span></li>
             <li><a class="nav-item nav-link" href="/faces">Faces</a></li>
             <li><a class="nav-item nav-link" href="/logout">Log Out</a></li>
         <% } %>
