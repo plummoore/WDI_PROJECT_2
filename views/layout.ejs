@@ -13,9 +13,7 @@
   <% for (const type in messages) { %>
     <p class="alert alert-<%= type %>"><%= messages[type] %></p>
   <% } %>
-  <%# <main class="container">%>
     <%- body %>
-  <%# </main>%>
   <% include ./partials/_footer %>
   <% include ./partials/_scripts %>
 </body>
