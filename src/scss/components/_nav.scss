@@ -1,5 +1,4 @@
 .navbar {
-  // background-color: darken($color-turquoise, 20%);
   background-color: $color-blue;
     a.nav-item {
       color: darken($color-grey, 40%);
@@ -14,10 +13,3 @@
       align-items: center;
     }
 }
-
-// .navbar-toggler-icon {
-//   background-color: $color-grey;
-// }
-//
-// .navbar-toggler:hover: { background-color: : orange;
-// }
